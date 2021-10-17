@@ -1,4 +1,4 @@
-package day6.t567字符串的排列;
+package algorithmPrimer14.src.day6.t567字符串的排列;
 
 /**
  * @author liq

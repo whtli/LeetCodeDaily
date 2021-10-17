@@ -1,4 +1,4 @@
-package day3.t167两数之和Ⅱ输入有序数组;
+package algorithmPrimer14.src.day3.t167两数之和Ⅱ输入有序数组;
 
 /**
  * @author liq

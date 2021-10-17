@@ -1,4 +1,4 @@
-package day6.t003无重复字符的最长子串;
+package algorithmPrimer14.src.day6.t003无重复字符的最长子串;
 
 /**
  * @author liq

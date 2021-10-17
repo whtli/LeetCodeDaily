@@ -1,4 +1,4 @@
-package day7.t695岛屿的最大面积;
+package algorithmPrimer14.src.day7.t695岛屿的最大面积;
 
 /**
  * @author liq

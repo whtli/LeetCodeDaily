@@ -1,4 +1,4 @@
-package day5.t019删除链表的倒数第N个结点;
+package algorithmPrimer14.src.day5.t019删除链表的倒数第N个结点;
 
 /**
  * @author liq

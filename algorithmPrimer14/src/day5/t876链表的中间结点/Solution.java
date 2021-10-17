@@ -1,4 +1,4 @@
-package day5.t876链表的中间结点;
+package algorithmPrimer14.src.day5.t876链表的中间结点;
 
 /**
  * @author liq

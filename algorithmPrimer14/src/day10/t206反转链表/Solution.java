@@ -1,4 +1,4 @@
-package day10.t206反转链表;
+package algorithmPrimer14.src.day10.t206反转链表;
 
 import java.util.List;
 

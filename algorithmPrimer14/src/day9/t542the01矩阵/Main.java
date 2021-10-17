@@ -1,4 +1,4 @@
-package day9.t542the01矩阵;
+package algorithmPrimer14.src.day9.t542the01矩阵;
 
 /**
  * @author liq

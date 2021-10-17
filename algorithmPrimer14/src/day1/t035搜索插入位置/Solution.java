@@ -1,4 +1,4 @@
-package day1.t035搜索插入位置;
+package algorithmPrimer14.src.day1.t035搜索插入位置;
 
 /**
  * @author liq

@@ -1,4 +1,4 @@
-package day1.t704二分查找;
+package algorithmPrimer14.src.day1.t704二分查找;
 
 /**
  * @author liq

@@ -1,4 +1,4 @@
-package day3.t283移动零;
+package algorithmPrimer14.src.day3.t283移动零;
 
 /**
  * @author liq

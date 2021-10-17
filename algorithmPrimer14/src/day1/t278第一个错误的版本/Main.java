@@ -1,4 +1,4 @@
-package day1.t278第一个错误的版本;
+package algorithmPrimer14.src.day1.t278第一个错误的版本;
 
 import java.util.Scanner;
 

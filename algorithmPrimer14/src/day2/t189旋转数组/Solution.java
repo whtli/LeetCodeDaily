@@ -1,4 +1,4 @@
-package day2.t189旋转数组;
+package algorithmPrimer14.src.day2.t189旋转数组;
 
 import java.util.Arrays;
 import java.util.zip.ZipInputStream;

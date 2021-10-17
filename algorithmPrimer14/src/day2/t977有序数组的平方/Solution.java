@@ -1,4 +1,4 @@
-package day2.t977有序数组的平方;
+package algorithmPrimer14.src.day2.t977有序数组的平方;
 
 import java.util.Arrays;
 
