@@ -1,9 +1,9 @@
 ---
 title: LeetCode精选面试题14.最长公共前缀
 copyright: true
-data: 2021-10-17
+data: 2021-10-17 21:00:00
 toc: true
-tags: [Java,LeetCode,字符串]
+tags: [Java,LeetCode,字符串,分治,面试]
 categories: [LeetCode]
 ---
 ### 题目描述
@@ -39,10 +39,15 @@ f   l   i   g   h   t
 ```bash
 LCP(S1,……,Sn) = LCP(LCP(S1,……,Sk),LCP(Sk+1,……,Sn))
 ```
++ 时间复杂度：O(mn)，m是数组中的字符串的平均长度，n是字符串数量。
+  递推公式：T(n) = 2 × T(n/2)+O(m) => T(n)=O(mn)
+  
++ 空间复杂度：O(m × log n)，其中m是字符串数组中的字符串的平均长度，n是字符串的数量。
+  空间复杂度主要取决于递归调用的层数，层数最大为log n，每层需要m的空间存储返回结果。
 ### 代码（Java）
 **思路1代码**
 ```java
-public class Solution {
+public class Solution1 {
     public String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
@@ -60,7 +65,47 @@ public class Solution {
         return strs[0];
     }
 }
+```
+**思路2代码**
+```java
+public class Solution2 {
+    public String longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+        /**
+         * solution2 divide and conquer
+         */
+        else {
+            return divideAndConquer(strs, 0, strs.length - 1);
+        }
+    }
 
+    private String divideAndConquer(String[] strings, int start, int end) {
+        if (start == end) {
+            return strings[start];
+        } else {
+            // 防止加法溢出
+            int middle = (end - start) / 2 + start;
+            String lcpLeft = divideAndConquer(strings, start, middle);
+            String lcpRight = divideAndConquer(strings, middle + 1, end);
+            return commonPrefix(lcpLeft, lcpRight);
+        }
+    }
+
+    private String commonPrefix(String lcpLeft, String lcpRight) {
+        int minLength = Math.min(lcpLeft.length(), lcpRight.length());
+        for (int index = 0; index < minLength; index++) {
+            if (lcpLeft.charAt(index) != lcpRight.charAt(index)) {
+                return lcpLeft.substring(0, index);
+            }
+        }
+        return lcpLeft.substring(0, minLength);
+    }
+}
+```
+**Main代码**
+```java
 public class Main {
     public static void main(String[] args) {
         String[] strings = {"abc","ab", "abd"};
