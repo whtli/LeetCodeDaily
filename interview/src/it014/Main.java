@@ -9,9 +9,13 @@ package interview.src.it014;
  */
 public class Main {
     public static void main(String[] args) {
-        String[] strings = {"abc","ab", "abd"};
-        Solution solution = new Solution();
-        String result = solution.longestCommonPrefix(strings);
-        System.out.println("result: " + result);
+        String[] strings = {"abc", "ab", "abd"};
+        Solution1 solution1 = new Solution1();
+        String result1 = solution1.longestCommonPrefix(strings);
+        System.out.println("result1: " + result1);
+        System.out.println("=========================");
+        Solution2 solution2 = new Solution2();
+        String result2 = solution2.longestCommonPrefix(strings);
+        System.out.println("result2: " + result2);
     }
 }
