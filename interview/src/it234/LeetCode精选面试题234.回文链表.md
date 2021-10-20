@@ -1,5 +1,5 @@
 ---
-title: LeetCode精选面试题234.回文链表
+title:  
 copyright: true
 data: 2021-10-17 21:00:00
 toc: true
@@ -7,7 +7,7 @@ tags: [Java,LeetCode,链表,面试]
 categories: [LeetCode]
 ---
 ### 题目描述
-
+给定一个单链表的头节点 head ，判断该链表是否为回文链表。若是，返回 true ；否则，返回 false 。
 ```bash
 example
 input  : head = 1->2->2->1
