@@ -1,7 +1,7 @@
 package interview.src.it088;
 
 /**
- * @Description
+ * @Description 88.合并两个有序数组
  * @Author liq
  * @Date 2021/10/25
  */
