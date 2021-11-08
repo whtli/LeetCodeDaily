@@ -87,13 +87,18 @@ note   : 第 1 步："-91283472332"（当前没有读入字符，因为没有前
 + 6、判断是否越界
 + 7、返回结果
 
-**思路2 借助字符数组**
-
+**思路2 借助字符串**
++ 1、去空格
++ 2、获取正负号
++ 3、借助stringBuilder获取数字字符
++ 4、删除前缀0
++ 5、借助字符串和int类型整数进行数值转换，提前进行越界判断，对界值进行缩小来和当前值比较，而不是放大当前值去和界值比较，因为会越界。
++ 6、返回结果
 
 ### 代码（Java）
 **思路1代码**
 ```java
-public class Solution {
+public class Solution1 {
     public int myAtoi(String s) {
         if (s.length() == 0) {
             return 0;
@@ -146,5 +151,56 @@ public class Solution {
 ```
 **思路2代码**
 ```java
+public class Solution2 {
+    public int myAtoi(String s) {
+        if (s.length() == 0) {
+            return 0;
+        }
+        // 去空格
+        String string = s.trim();
+        if (string.length() == 0) {
+            return 0;
+        }
+        // 获取正负号
+        int symbol = 1;
+        if (string.charAt(0) == '-') {
+            symbol = -1;
+        }
 
+        int index = 0;
+        if (symbol == -1 || string.charAt(0) == '+') {
+            index = 1;
+        }
+
+        int length = string.length();
+        StringBuilder stringBuilder = new StringBuilder();
+        while (index < length && string.charAt(index) >= '0' && string.charAt(index) <= '9') {
+            stringBuilder.append(string.charAt(index));
+            index++;
+        }
+        if (stringBuilder.length() == 0) {
+            return 0;
+        }
+
+        // 去除前导0
+        int i = 0;
+        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') ;
+        String input = stringBuilder.toString().substring(i - 1);
+
+        // 有效数值转换
+        int number = 0;
+        for (i = 0; i < input.length(); i++) {
+            if (symbol == 1 && (number > Integer.MAX_VALUE / 10
+                    || (number == Integer.MAX_VALUE / 10 && (input.charAt(i) - '0') > Integer.MAX_VALUE % 10))) {
+                return Integer.MAX_VALUE;
+            }
+            if (symbol == -1 && (number > Integer.MIN_VALUE / (-10)
+                    || (number == Integer.MIN_VALUE / (-10) && (input.charAt(i) - '0') > -(Integer.MIN_VALUE % 10)))) {
+                return Integer.MIN_VALUE;
+            }
+            number = number * 10 + (input.charAt(i) - '0');
+        }
+        return symbol * number;
+    }
+}
 ```

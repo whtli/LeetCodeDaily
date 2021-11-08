@@ -19,8 +19,8 @@ package interview.src.it008;
  */
 public class Main {
     public static void main(String[] args) {
-        String string = "  00000000000000000";
-        Solution solution = new Solution();
+        String string = "-2147483649";
+        Solution2 solution = new Solution2();
         int res = solution.myAtoi(string);
         System.out.println(res);
 
