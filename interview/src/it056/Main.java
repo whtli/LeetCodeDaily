@@ -9,7 +9,7 @@ package interview.src.it056;
  */
 public class Main {
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        Solution1 solution = new Solution1();
 //        int[][] intervals = {{1, 3}, {2, 6}, {8, 16}, {15, 18}};
 //        int[][] intervals = {{1, 4}, {4, 18}};
         int[][] intervals = {{1, 4}, {2, 3}};

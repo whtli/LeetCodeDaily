@@ -10,7 +10,7 @@ import java.util.Comparator;
  * @Author liq
  * @Date 2021/11/04
  */
-public class Solution {
+public class Solution1 {
     public int[][] merge(int[][] intervals) {
         int length = intervals.length;
         // System.out.println(length);
@@ -22,25 +22,20 @@ public class Solution {
             }
         });
 
-        for (int i = 0; i < length; i++) {
-            System.out.println(intervals[i][0] + " , " + intervals[i][1]);
-        }
-        // intervals = {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        //                              i         j
         for (int i = 0, j = 1; i < length && j <= length; i = j, j = i + 1) {
             while (j < length && intervals[i][1] >= intervals[j][0]) {
-                // if (intervals[j][1] > intervals[i][1]) {
+                /* if (intervals[j][1] > intervals[i][1]) {
+                    intervals[i][1] = intervals[j][1];
+                } */
                 intervals[i][1] = Math.max(intervals[j][1] , intervals[i][1]);
-                // }
-
                 j++;
             }
-            System.out.println(intervals[i][0] + " , " + intervals[i][1]);
+            // System.out.println(intervals[i][0] + " , " + intervals[i][1]);
             result[count] = intervals[i];
-            System.out.println("current:  i = " + i + " , j = " + j);
+            // System.out.println("current:  i = " + i + " , j = " + j);
             count++;
         }
-        System.out.println("count : " + count);
+        // System.out.println("count : " + count);
         int[][] merged = new int[count][2];
         for (int i = 0; i < count; i++) {
             merged[i] = result[i];
