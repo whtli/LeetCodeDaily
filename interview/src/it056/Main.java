@@ -10,9 +10,10 @@ package interview.src.it056;
 public class Main {
     public static void main(String[] args) {
         Solution1 solution = new Solution1();
-//        int[][] intervals = {{1, 3}, {2, 6}, {8, 16}, {15, 18}};
-//        int[][] intervals = {{1, 4}, {4, 18}};
-        int[][] intervals = {{1, 4}, {2, 3}};
+        // int[][] intervals = {{1, 3}, {2, 6}, {8, 9}, {15, 18}};
+        // int[][] intervals = {{1, 4}, {6, 18}};
+        // int[][] intervals = {{1, 4}, {2, 3}};
+        int[][] intervals = {{1, 4},{0, 2}, {3, 5}};
         int[][] res = solution.merge(intervals);
         for (int i = 0; i < res.length; i++) {
             System.out.println("[" + res[i][0] + ", " + res[i][1] + "] ");

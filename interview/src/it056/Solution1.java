@@ -12,34 +12,25 @@ import java.util.Comparator;
  */
 public class Solution1 {
     public int[][] merge(int[][] intervals) {
-        int length = intervals.length;
-        // System.out.println(length);
-        int count = 0;
-        int[][] result = new int[length][2];
         Arrays.sort(intervals, new Comparator<int[]>() {
             public int compare(int[] interval1, int[] interval2) {
                 return interval1[0] - interval2[0];
             }
         });
 
+        int length = intervals.length;
+        int[][] result = new int[length][2];
+        int count = 0;
         for (int i = 0, j = 1; i < length && j <= length; i = j, j = i + 1) {
             while (j < length && intervals[i][1] >= intervals[j][0]) {
-                /* if (intervals[j][1] > intervals[i][1]) {
-                    intervals[i][1] = intervals[j][1];
-                } */
                 intervals[i][1] = Math.max(intervals[j][1] , intervals[i][1]);
                 j++;
             }
-            // System.out.println(intervals[i][0] + " , " + intervals[i][1]);
             result[count] = intervals[i];
             // System.out.println("current:  i = " + i + " , j = " + j);
             count++;
         }
         // System.out.println("count : " + count);
-        int[][] merged = new int[count][2];
-        for (int i = 0; i < count; i++) {
-            merged[i] = result[i];
-        }
-        return merged;
+        return Arrays.copyOf(result, count);
     }
 }
