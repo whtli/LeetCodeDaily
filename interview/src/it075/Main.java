@@ -9,8 +9,9 @@ package interview.src.it075;
  */
 public class Main {
     public static void main(String[] args) {
-        Solution1 solution = new Solution1();
-        int[] nums = {2,     0,    2,    1,    1,    1};
+        Solution2 solution = new Solution2();
+        // int[] nums = {2, 0, 2, 1, 1, 1};
+        int[] nums = {2, 0, 1};
         solution.sortColors(nums);
         for (int item : nums) {
             System.out.println(item);

@@ -8,20 +8,34 @@ package interview.src.it075;
  * @Date 2021/11/04
  */
 public class Solution1 {
+    /* public void sortColors(int[] nums) {
+        int length = nums.length;
+        int zero = 0, two = length - 1;
+        int i = 0;
+        while (i <= two) {
+            if (nums[i] == 0) {
+                nums[i] = nums[zero];
+                nums[zero++] = 0;
+                i++;
+            } else if (nums[i] == 2) {
+                nums[i] = nums[two];
+                nums[two--] = 2;
+            } else {
+                i++;
+            }
+        }
+    } */
+    // 基于上方注释内容，抽出交换数据的方法
     public void sortColors(int[] nums) {
         int length = nums.length;
         int zero = 0, two = length;
         int i = 0;
         while (i < two) {
             if (nums[i] == 0) {
-                nums[i] = nums[zero];
-                nums[zero++] = 0;
-                // swap(nums, i, zero++);
+                swap(nums, i, zero++);
                 i++;
             } else if (nums[i] == 2) {
-                // swap(nums, i, --two);
-                nums[i] = nums[--two];
-                nums[two] = 2;
+                swap(nums, i, --two);
             } else {
                 i++;
             }
