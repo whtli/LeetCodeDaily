@@ -9,8 +9,9 @@ package interview.src.it227;
  */
 public class Main {
     public static void main(String[] args) {
-        Solution1 solution = new Solution1();
-        String string = "-3+2*2";
+        Solution2 solution = new Solution2();
+        // String string = " -3+5 / 2 ";
+        String string = "1*2-3/4+5*6-7*8+9/10";
         int result = solution.calculate(string);
         System.out.println("result : " + result);
     }
