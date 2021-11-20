@@ -66,4 +66,37 @@ public class Solution {
         return stack.pop();
     }
 }
+
+/**
+ * 美化一下
+ */
+public class Solution {
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
+        List<String> ops = Arrays.asList("+", "-", "*", "/");
+        for (String s : tokens) {
+            if (ops.contains(s)) {
+                stack.push(calculate(s, stack.pop(), stack.pop()));
+            } else {
+                stack.push(Integer.valueOf(s));
+            }
+        }
+        return stack.pop();
+    }
+
+    private int calculate(String op, int x, int y) {
+        switch (op){
+            case "+" :
+                return y + x;
+            case "-":
+                return y - x;
+            case "*" :
+                return y * x;
+            case "/":
+                return y / x;
+        }
+        return 0;
+    }
+}
+
 ```

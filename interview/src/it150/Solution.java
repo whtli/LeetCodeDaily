@@ -16,6 +16,31 @@ import java.util.Stack;
 public class Solution {
     public int evalRPN(String[] tokens) {
         Stack<Integer> stack = new Stack<>();
+        for (String s : tokens) {
+            if (s.equals("+")) {
+                stack.push(stack.pop() + stack.pop());
+            } else if (s.equals("-")) {
+                int after = stack.pop();
+                int before = stack.pop();
+                stack.push(before - after);
+            } else if (s.equals("*")) {
+                stack.push(stack.pop() * stack.pop());
+            } else if (s.equals("/")) {
+                int after = stack.pop();
+                int before = stack.pop();
+                stack.push(before / after);
+            } else {
+                stack.push(Integer.valueOf(s));
+            }
+        }
+        return stack.pop();
+    }
+}
+/**
+ * 美化一下代码
+public class Solution {
+    public int evalRPN(String[] tokens) {
+        Stack<Integer> stack = new Stack<>();
         List<String> ops = Arrays.asList("+", "-", "*", "/");
         for (String s : tokens) {
             if (ops.contains(s)) {
@@ -41,3 +66,4 @@ public class Solution {
         return 0;
     }
 }
+ */
