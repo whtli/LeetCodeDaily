@@ -25,18 +25,13 @@ public class Solution2 {
         while (true) {
             faster = nums[nums[faster]];
             slower = nums[slower];
-            System.out.println("faster : " + faster + " , slower : " + slower);
-            System.out.println("faster value : " + nums[faster] + " , slower value : " + nums[slower]);
             if (faster == slower) {
-                break;
-            }
-        }
-        int result = 0;
-        while (true) {
-            result = nums[result];
-            slower = nums[slower];
-            if (slower == result){
-                return result;
+                int result = 0;
+                while (nums[result] != nums[slower]) {
+                    result = nums[result];
+                    slower = nums[slower];
+                }
+                return nums[result];
             }
         }
     }
