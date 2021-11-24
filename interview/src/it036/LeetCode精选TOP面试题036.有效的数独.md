@@ -1,5 +1,5 @@
 ---
-title: LeetCode精选TOP面试题036.有效地数独
+title: LeetCode精选TOP面试题036.有效的数独
 copyright: true
 data: 2021-11-23 21:00:00
 toc: true
