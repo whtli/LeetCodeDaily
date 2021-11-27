@@ -12,7 +12,7 @@ import java.util.HashSet;
  * nums.length == n + 1
  * 1 <= nums[i] <= n
  * nums 中 只有一个整数 出现 两次或多次 ，其余整数均只出现 一次
- *
+ * <p>
  * 进阶：
  * 如何证明 nums 中至少存在一个重复的数字?
  * 设计一个线性级时间复杂度 O(n) 的解决方案
@@ -21,18 +21,35 @@ import java.util.HashSet;
  */
 public class Solution2 {
     public int findDuplicate(int[] nums) {
-        int faster = 0, slower = 0;
-        while (true) {
+        int slower = nums[0];
+        int faster = nums[nums[0]];
+        while (faster != slower) {
+            System.out.println("slower : " + slower + " , " + nums[slower]);
+            System.out.println("faster : " + faster + " , " + nums[faster]);
             faster = nums[nums[faster]];
             slower = nums[slower];
-            if (faster == slower) {
-                int result = 0;
-                while (nums[result] != nums[slower]) {
-                    result = nums[result];
-                    slower = nums[slower];
-                }
-                return nums[result];
-            }
         }
+        System.out.println("slower : " + slower + " , " + nums[slower]);
+        System.out.println("faster : " + faster + " , " + nums[faster]);
+        for (int n : nums) {
+            System.out.print(n + ", ");
+        }
+        System.out.println();
+        int step1 = 0, step2 = slower;
+        while (step1 != step2) {
+            System.out.println("step1 : " + step1 + " , " + nums[step1]);
+            System.out.println("step2 : " + step2 + " , " + nums[step2]);
+            step1 = nums[step1];
+            step2 = nums[step2];
+        }
+        return step1;
+
+        /*while (nums[step1] != nums[step2]) {
+            System.out.println("step1 : " + step1 + " , " + nums[step1]);
+            System.out.println("step2 : " + step2 + " , " + nums[step2]);
+            step1 = nums[step1];
+            step2 = nums[step2];
+        }
+        return nums[step1];*/
     }
 }

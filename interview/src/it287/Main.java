@@ -10,7 +10,7 @@ package interview.src.it287;
  * nums.length == n + 1
  * 1 <= nums[i] <= n
  * nums 中 只有一个整数 出现 两次或多次 ，其余整数均只出现 一次
- *
+ * <p>
  * 进阶：
  * 如何证明 nums 中至少存在一个重复的数字?
  * 设计一个线性级时间复杂度 O(n) 的解决方案
@@ -19,8 +19,9 @@ package interview.src.it287;
  */
 public class Main {
     public static void main(String[] args) {
-        Solution3 solution = new Solution3();
-        int[] nums = {4, 3, 1, 4, 2};
+        Solution2 solution = new Solution2();
+        int[] nums = {2, 5, 4, 6, 9, 3, 8, 9, 7, 1};
+        //int[] nums = {1, 3, 4, 2, 2};
         // int[] nums = {1, 1};
         int result = solution.findDuplicate(nums);
         System.out.println("result : " + result);
