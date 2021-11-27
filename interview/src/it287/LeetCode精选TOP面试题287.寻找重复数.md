@@ -44,7 +44,7 @@ output : 1
 + 空间复杂度O(n)
 + 题目不允许空间复杂度O(n)，虽然使用HashSet编写代码很快，但是违反了题目要求
 
-**思路2: 双指针**
+**思路2: 双指针（快慢）**
 
 + 由索引找到元素，再将这个元素作为索引，继续找下一个元素，因为数组中有重复元素，故最终会形成一个循环
 + 定义快慢指针
@@ -107,10 +107,7 @@ public class Solution2 {
         }
         //System.out.println("slower : " + slower + " , " + nums[slower]);
         //System.out.println("faster : " + faster + " , " + nums[faster]);
-        for (int n : nums) {
-            System.out.print(n + ", ");
-        }
-        System.out.println();
+
         int step1 = 0, step2 = slower;
         while (step1 != step2) {
             System.out.println("step1 : " + step1 + " , " + nums[step1]);
