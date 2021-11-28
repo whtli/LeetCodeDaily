@@ -1,4 +1,4 @@
-package interview.src.it002.addtwoitem;
+package interview.src.it002;
 
 public class ListNode {
 	int val;

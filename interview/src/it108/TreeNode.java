@@ -1,4 +1,4 @@
-package it104.maxDepth;
+package interview.src.it108;
 
 public class TreeNode {
     int val;

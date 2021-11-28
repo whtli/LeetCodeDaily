@@ -1,4 +1,4 @@
-package it104.maxDepth;
+package interview.src.it104;
 
 
 public class Solution2 {

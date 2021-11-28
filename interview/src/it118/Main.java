@@ -1,4 +1,4 @@
-package it118.pascalTriangle;
+package interview.src.it118;
 
 import java.util.List;
 

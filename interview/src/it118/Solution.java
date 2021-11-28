@@ -1,4 +1,4 @@
-package it118.pascalTriangle;
+package interview.src.it118;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,35 +6,35 @@ import java.util.List;
 /**
  * @author : LiQiang
  * @2020/2/25 22:09
- * @title : Ñî»ÔÈý½Ç
+ * @title : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>();
-        if(numRows < 1){ // ÅÐ¶ÏºÏ·¨ÐÔ
+        if(numRows < 1){ // ï¿½Ð¶ÏºÏ·ï¿½ï¿½ï¿½
             return triangle;
         }
-        // µÚÒ»ÐÐµ¥¶À´¦Àí£¬Ö»ÓÐÒ»¸öÔªËØ 1
+        // ï¿½ï¿½Ò»ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½ 1
         List<Integer> first = new ArrayList<>();
         first.add(1);
         triangle.add(first);
 
-        // ´¦ÀíµÚ 2 µ½ n ÐÐ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ 2 ï¿½ï¿½ n ï¿½ï¿½
         for (int rownum = 1; rownum < numRows; rownum ++){
-            // ´´½¨ÐÂµÄÒ»ÐÐ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Ò»ï¿½ï¿½
             List<Integer> newrow = new ArrayList<>();
-            // »ñÈ¡µ±Ç°ÐÂÐÐµÄÉÏÒ»ÐÐ
+            // ï¿½ï¿½È¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½Ò»ï¿½ï¿½
             List<Integer> prerow = triangle.get(rownum - 1);
-            // Ã¿Ò»ÐÐµÄµÚÒ»¸öÔªËØÊÇ 1, µ¥¶À´¦Àí
+            // Ã¿Ò»ï¿½ÐµÄµï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½ 1, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             newrow.add(1);
-            // ¸ù¾ÝÑî»ÔÈý½ÇµÄÌØµã
-            // Ã¿Ò»ÐÐµÄµÚ 2 (µ± ÐÐÊý > 2 Ê±)µ½ ¡°ÐÐÊý- 1¡± ¸öÔªËØµÄÖµ, ÊÇËü×óÉÏ·½ºÍÓÒÉÏ·½µÄÊýµÄºÍ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Çµï¿½ï¿½Øµï¿½
+            // Ã¿Ò»ï¿½ÐµÄµï¿½ 2 (ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ > 2 Ê±)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½- 1ï¿½ï¿½ ï¿½ï¿½Ôªï¿½Øµï¿½Öµ, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Äºï¿½
             for (int k = 1; k < rownum; k ++){
                 newrow.add(prerow.get(k - 1) + prerow.get(k));
             }
 
 
-            // Ã¿Ò»ÐÐµÄ×îºóÒ»¸öÔªËØÒ²ÊÇ 1,µ¥¶À´¦Àí
+            // Ã¿Ò»ï¿½Ðµï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ôªï¿½ï¿½Ò²ï¿½ï¿½ 1,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             newrow.add(1);
             triangle.add(newrow);
          }

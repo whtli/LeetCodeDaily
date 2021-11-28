@@ -1,9 +1,9 @@
-package it104.maxDepth;
+package interview.src.it104;
 
 /**
  * @author : flower48237
  * @2020/3/4 19:14
- * @title : LeetCode¾«Ñ¡TOPÃæÊÔÌâ104.¶þ²æÊ÷µÄ×î´óÉî¶È
+ * @title : LeetCodeï¿½ï¿½Ñ¡TOPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½104.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class Main {
     public static void main(String[] args) {

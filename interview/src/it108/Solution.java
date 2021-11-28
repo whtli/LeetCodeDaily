@@ -1,4 +1,4 @@
-package it108.transfer;
+package interview.src.it108;
 
 import java.util.*;
 
@@ -7,29 +7,29 @@ public class Solution {
 
     public TreeNode Transfer(int left, int right) {
         if (left > right){
-            // ÍË³öµÝ¹éµÄ±ß½çÌõ¼þ
+            // ï¿½Ë³ï¿½ï¿½Ý¹ï¿½Ä±ß½ï¿½ï¿½ï¿½ï¿½ï¿½
             return null;
         }
-        // Ë¼Â· 1 £ºÊ¼ÖÕÑ¡ÔñÖÐ¼äÎ»ÖÃ×ó±ßÔªËØ×÷Îª¸ù½Úµã
+        // Ë¼Â· 1 ï¿½ï¿½Ê¼ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ð¼ï¿½Î»ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Úµï¿½
         int midloc = (left + right) / 2;
 
-        // Ë¼Â· 2 £ºÊ¼ÖÕÑ¡ÔñÖÐ¼äÎ»ÖÃÓÒ±ßÔªËØ×÷Îª¸ù½Úµã
+        // Ë¼Â· 2 ï¿½ï¿½Ê¼ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ð¼ï¿½Î»ï¿½ï¿½ï¿½Ò±ï¿½Ôªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Úµï¿½
         /*int midloc = (left + right) / 2;
         if ((left + right) % 2 == 1) {
             midloc ++;
         }*/
 
-        // Ë¼Â· 3 £ºÑ¡ÔñÈÎÒâÒ»¸öÖÐ¼äÎ»ÖÃÔªËØ×÷Îª¸ù½Úµã
+        // Ë¼Â· 3 ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð¼ï¿½Î»ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Úµï¿½
         /*int midloc = (left + right) / 2;
         Random rand = new Random();
         if ((left + right) % 2 == 1){
             midloc += rand.nextInt(2);
         }*/
 
-        // µÝ¹é½¨Ê÷
+        // ï¿½Ý¹é½¨ï¿½ï¿½
         TreeNode root = new TreeNode(nums[midloc]);
-        root.left = Transfer(left, midloc - 1);   // ×óµÝ¹é
-        root.right = Transfer(midloc + 1, right);  // ÓÒµÝ¹é
+        root.left = Transfer(left, midloc - 1);   // ï¿½ï¿½Ý¹ï¿½
+        root.right = Transfer(midloc + 1, right);  // ï¿½ÒµÝ¹ï¿½
         return root;
     }
 
@@ -47,14 +47,14 @@ public class Solution {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
-        //´æ·Å±éÀú½á¹û£¬È»ºó·µ»Ø
+        //ï¿½ï¿½Å±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È»ï¿½ó·µ»ï¿½
         List<Integer> result = new ArrayList<>();
 
         while (!queue.isEmpty()) {
             TreeNode treeNode = queue.poll();
 
             /*
-            ´¦Àí TreeNode ½Úµã µÄÂß¼­
+            ï¿½ï¿½ï¿½ï¿½ TreeNode ï¿½Úµï¿½ ï¿½ï¿½ï¿½ß¼ï¿½
              */
             result.add(treeNode.val);
 
