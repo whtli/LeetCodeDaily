@@ -1,12 +1,12 @@
 ---
-title: LeetCode精选TOP面试题073.矩阵置0
+title: LeetCode精选TOP面试题073.矩阵置零
 copyright: true
 toc: true
 tags:
   - Java
   - LeetCode
   - 数组
-  - 哈希表
+  - 矩阵
 categories:
   - LeetCode
 date: 2021-12-30 18:00:00
