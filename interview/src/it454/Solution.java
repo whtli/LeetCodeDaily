@@ -14,7 +14,7 @@ import java.util.Map;
 public class Solution {
     public int fourSumCount(int[] nums1, int[] nums2, int[] nums3, int[] nums4) {
         int result = 0;
-        Map<Integer, Integer> hashmap = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> hashmap = new HashMap<Integer, Integer>(nums1.length * nums2.length);
         for (int num1 : nums1) {
             for (int num2 : nums2) {
                 hashmap.put(num1 + num2, hashmap.getOrDefault(num1 + num2, 0) + 1);

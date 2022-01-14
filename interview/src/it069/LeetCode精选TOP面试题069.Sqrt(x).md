@@ -79,7 +79,9 @@ public class Solution2 {
 public class Solution3 {
     public int mySqrt(int x) {
         int c = x;
-        if (x == 0) return 0;
+        if (x == 0) {
+            return 0;
+        }
         return (int) sqrt(x, c);
     }
 

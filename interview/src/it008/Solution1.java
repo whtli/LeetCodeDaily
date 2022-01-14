@@ -50,7 +50,7 @@ public class Solution1 {
             return 0;
         }
         int i = 0;
-        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') ;
+        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') {};
         String input = stringBuilder.toString().substring(i - 1);
         long number;
         if (input.length() > 10) {

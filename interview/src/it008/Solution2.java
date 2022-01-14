@@ -50,7 +50,7 @@ public class Solution2 {
 
         // 去除前导0
         int i = 0;
-        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') ;
+        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0')  {};
         String input = stringBuilder.toString().substring(i - 1);
 
         // 有效数值转换

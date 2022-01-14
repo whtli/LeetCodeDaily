@@ -11,7 +11,8 @@ import java.util.List;
 public class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<List<Integer>>();
-        if(numRows < 1){ // �жϺϷ���
+        // �жϺϷ���
+        if(numRows < 1){
             return triangle;
         }
         // ��һ�е�������ֻ��һ��Ԫ�� 1

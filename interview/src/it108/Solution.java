@@ -1,7 +1,11 @@
 package interview.src.it108;
 
 import java.util.*;
-
+/**
+ * @Description
+ * @Author liq
+ * @Date
+ */
 public class Solution {
     int[] nums;
 
@@ -28,8 +32,10 @@ public class Solution {
 
         // �ݹ齨��
         TreeNode root = new TreeNode(nums[midloc]);
-        root.left = Transfer(left, midloc - 1);   // ��ݹ�
-        root.right = Transfer(midloc + 1, right);  // �ҵݹ�
+        // ��ݹ�
+        root.left = Transfer(left, midloc - 1);
+        // �ҵݹ�
+        root.right = Transfer(midloc + 1, right);
         return root;
     }
 

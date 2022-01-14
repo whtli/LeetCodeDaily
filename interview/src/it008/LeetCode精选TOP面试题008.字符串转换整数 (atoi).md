@@ -129,7 +129,7 @@ public class Solution1 {
         }
         // 删除前缀0
         int i = 0;
-        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') ;
+        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') {};
         String input = stringBuilder.toString().substring(i - 1);
         // 长度判断，过长则截取
         long number;
@@ -184,7 +184,7 @@ public class Solution2 {
 
         // 去除前导0
         int i = 0;
-        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') ;
+        while (i < stringBuilder.length() && stringBuilder.charAt(i++) == '0') {};
         String input = stringBuilder.toString().substring(i - 1);
 
         // 有效数值转换

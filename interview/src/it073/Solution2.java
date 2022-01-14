@@ -7,7 +7,9 @@ package interview.src.it073;
  * @Date 2021/12/30
  */
 public class Solution2 {
-    // 辅助数组
+    /**
+     * 辅助数组
+     */
     public void setZeroes(int[][] matrix) {
         boolean[] flagRow = new boolean[matrix.length];
         boolean[] flagCol = new boolean[matrix[0].length];

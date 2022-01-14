@@ -9,15 +9,19 @@ package interview.src.it069;
  * @Date 2021/10/22
  */
 public class Solution3 {
+    final double threshold = 0.000001;
+
     public int mySqrt(int x) {
         int c = x;
-        if (x == 0) return 0;
+        if (x == 0) {
+            return 0;
+        }
         return (int) sqrt(x, c);
     }
 
     public double sqrt(double x, int c) {
         double result = (x + c / x) / 2;
-        if (result == x) {
+        if ((result - x) < threshold) {
             return result;
         } else {
             return sqrt(result, c);

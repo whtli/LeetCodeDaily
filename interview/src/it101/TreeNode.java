@@ -1,14 +1,15 @@
-package interview.src.it108;
+package interview.src.it101;
+
 /**
- * @Description
- * @Author liq
- * @Date
+ * @author :
+ * @2020/4/4 9:13
+ * @title :
  */
 public class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
     TreeNode(int x){
-        this.val = x;
+        val = x;
     }
 }

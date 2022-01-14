@@ -1,6 +1,10 @@
 package interview.src.it104;
 
-
+/**
+ * @Description
+ * @Author liq
+ * @Date
+ */
 public class Solution2 {
     public int maxDepth(TreeNode root) {
         if (root == null){

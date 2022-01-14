@@ -25,7 +25,10 @@ public class Solution1 {
             }
         }
     } */
-    // 基于上方注释内容，抽出交换数据的方法
+
+    /**
+     * 基于上方注释内容，抽出交换数据的方法
+     */
     public void sortColors(int[] nums) {
         int length = nums.length;
         int zero = 0, two = length;

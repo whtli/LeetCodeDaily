@@ -27,7 +27,11 @@ class MyBst {
         countNumber(root);
     }
 
-    // 统计以node为根结点的子树的结点数
+    /**
+     * 统计以node为根结点的子树的结点数
+     * @param node
+     * @return
+     */
     private int countNumber(TreeNode node) {
         if (node == null) {
             return 0;
@@ -36,7 +40,11 @@ class MyBst {
         return nodeNumber.get(node);
     }
 
-    // 返回二叉搜索树中第k小的元素
+    /**
+     * 返回二叉搜索树中第k小的元素
+     * @param k
+     * @return
+     */
     public int kthSmallest(int k) {
         TreeNode node = root;
         while (node != null) {

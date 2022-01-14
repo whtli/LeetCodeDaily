@@ -13,6 +13,7 @@ import java.util.Comparator;
 public class Solution1 {
     public int[][] merge(int[][] intervals) {
         Arrays.sort(intervals, new Comparator<int[]>() {
+            @Override
             public int compare(int[] interval1, int[] interval2) {
                 return interval1[0] - interval2[0];
             }
