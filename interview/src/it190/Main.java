@@ -1,11 +1,11 @@
-package it190.reverseBits;
+package interview.src.it190;
 
 import java.util.Scanner;
 
 /**
  * @author : flower48237
  * @2020/3/18 21:25
- * @title : LeetCode¾«Ñ¡TOPÃæÊÔÌâ190.µßµ¹¶þ½øÖÆÎ»
+ * @title : LeetCodeï¿½ï¿½Ñ¡TOPï¿½ï¿½ï¿½ï¿½ï¿½ï¿½190.ï¿½ßµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»
  */
 public class Main {
     public static void main(String[] args) {
