@@ -11,10 +11,10 @@ public class Main {
 
         double x = 2.00000;
         int n = 10;
-        Solution2 solution1 = new Solution2();
+        Solution1 solution1 = new Solution1();
         double result1 = solution1.myPow(x, n);
         System.out.println("solution1 : " + result1);
-        Solution1 solution2 = new Solution1();
+        Solution2 solution2 = new Solution2();
         double result2 = solution2.myPow(x, n);
         System.out.println("solution2 : " + result2);
     }
