@@ -20,17 +20,17 @@ public class Solution2 {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
         dfs(root);
 
-        while (p != null){
+        while (p != null) {
             visited.add(p.val);
             p = map.get(p.val);
         }
-        while (q != null){
-            if ( visited.contains(q.val)) {
-               return q;
+        while (q != null) {
+            if (visited.contains(q.val)) {
+                return q;
             }
             q = map.get(q.val);
         }
-        return null;
+        return root;
     }
 
     private void dfs(TreeNode root) {
