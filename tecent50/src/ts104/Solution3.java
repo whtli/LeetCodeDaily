@@ -2,7 +2,6 @@ package tecent50.src.ts104;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.Stack;
 
 /**
  * @Description 104. 二叉树的最大深度
@@ -25,7 +24,7 @@ public class Solution3 {
             int size = queue.size();
             while (size > 0) {
                 TreeNode tmp = queue.poll();
-                size --;
+                size--;
                 if (tmp.left != null) {
                     queue.add(tmp.left);
                 }
@@ -33,7 +32,7 @@ public class Solution3 {
                     queue.add(tmp.right);
                 }
             }
-            maxDepth ++;
+            maxDepth++;
         }
         return maxDepth;
     }
