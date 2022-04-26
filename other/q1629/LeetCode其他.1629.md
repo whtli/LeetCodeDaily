@@ -1,5 +1,5 @@
 ---
-title: LeetCode其他-1629.按键持续时间最长的键
+title: LeetCode算法题-1629.按键持续时间最长的键
 copyright: true
 toc: true
 tags:
