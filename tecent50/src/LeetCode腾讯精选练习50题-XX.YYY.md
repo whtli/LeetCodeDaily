@@ -21,6 +21,10 @@ example
 input  : 
 output : 
 note   : 
+
+input  : 
+output : 
+note   : 
 ```
 
 <!--more-->
