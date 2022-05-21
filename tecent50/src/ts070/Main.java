@@ -1,0 +1,19 @@
+package tecent50.src.ts070;
+
+/**
+ * @Description 70. 爬楼梯
+ * 假设你正在爬楼梯。需要 n 阶你才能到达楼顶。
+ * 每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？
+ * @Author liq
+ * @Date 2022/05/16
+ */
+public class Main {
+    public static void main(String[] args) {
+        Solution1 solution = new Solution1();
+        int n = 2;
+        int cnt = solution.climbStairs(n);
+        int cnt2 = solution.climbStairs2(n);
+        System.out.println(cnt);
+        System.out.println(cnt2);
+    }
+}
