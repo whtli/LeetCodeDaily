@@ -33,10 +33,20 @@ output : false
 <!--more-->
 
 ### 解题思路
-**思路1**
 
-**思路2**
+##### 思路1 哈希表
++ 遍历链表，把遍历过的节点存入哈希表中
++ 当第一次出现被遍历到的节点已经存在于哈希表中的情况时，这个节点就是环形的入口节点
++ 时间复杂度:O(N)
++ 空间复杂度:O(N)
 
+##### 思路2 快慢指针
++ 设快指针是fast，慢指针是slow
++ 快指针以2倍速前进，慢指针以逐步前进，则起始时将fast置于第2个节点，slow置于第1个节点
++ 如果两者最终相遇（不为空），则说明有环，反之无环
+
++ 时间复杂度:O(N)
++ 空间复杂度:O(1)
 
 ### 代码（Java）
 **思路1代码**
@@ -69,15 +79,15 @@ public class Solution2 {
         if (head.next == null) {
             return false;
         }
-        ListNode fast = head;
-        ListNode slow = head.next;
+        ListNode slow = head;
+        ListNode fast = head.next;
         while (fast != null && slow != null) {
             if (fast == slow) {
                 return true;
             }
-            fast = fast.next;
-            if (slow.next != null) {
-                slow = slow.next.next;
+            slow = slow.next;
+            if (fast.next != null) {
+                fast = fast.next.next;
             } else {
                 return false;
             }
