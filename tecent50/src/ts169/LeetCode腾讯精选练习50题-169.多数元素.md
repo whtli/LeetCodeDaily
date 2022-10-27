@@ -23,9 +23,10 @@ date: 2022-05-14 21:00:00
 
 ```bash
 example
-input  : 
-output : 
-note   : 
+input  : nums = [3,2,3]
+output : 3
+input  : nums = [2,2,1,1,1,2,2]
+output : 2 
 ```
 
 <!--more-->
